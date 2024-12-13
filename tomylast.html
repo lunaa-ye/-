@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角落</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #001f3f;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        header {
+            background-color: rgba(255, 248, 220, 0.8);
+            color: #555;
+            text-align: center;
+            padding: 20px 10px;
+            border-bottom: 1px solid #ddd;
+            z-index: 10;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 240, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        .special-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+        /* 背景层 */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none; /* 禁止鼠标交互 */
+        }
+        /* 动态星星样式 */
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.5); }
+        }
+        /* 动态雪花样式 */
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 10px;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+        @media (max-width: 768px) {
+            .star, .snowflake {
+                display: none; /* 在移动设备上禁用动态效果 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景动态效果层 -->
+    <div class="background"></div>
+
+    <header>
+      <h1><strong>欢迎来到蕞尔之地</strong></h1>
+        <p>无论今天如何，都希望这片小天地能带给你一丝温暖</p>
+    </header>
+
+    <div class="container">
+        <!-- 萱的信 -->
+        <div class="section">
+            <h2>致萱的一封信</h2>
+            <div class="letter">
+                <p>亲爱的萱：</p>
+                <p>我知道最近对你来说很难熬。final的压力、身体的不适，再加上圣诞假期独自留在异乡，所有的这些都让你觉得格外沉重。这样的感受很正常，这只是因为你在乎眼前的一切，想要把每件事情都做到最好。</p>
+                <p>但萱，我希望你能停下来，给自己一点时间。闭上眼睛，深呼吸，然后告诉自己：你真的已经很棒了。过去这一年，你战胜了许多看似无法跨越的困难，而现在的你，比昨天的你更加坚韧和勇敢。这样的力量，是属于你的宝藏，永远不会失去。</p>
+                <p>今年的圣诞可能有些安静，但也许正因为如此，它是一个与自己重新连接的机会。披上温暖的毯子，泡一杯热饮，让时间慢下来，感受这片刻的平静。你不需要做任何特别的事情，爱、温柔、善待自己，这些本就是你应得的。</p>
+                <p>请记住，这只是你故事中的一个章节。考试会结束，孤单也会过去，更明亮的日子正在前方向你招手。在那之前，萱，对自己温柔一点，好吗？你比自己想象中要好得多。</p>
+                <p>如果某一刻，你感到无法承受，就抬头看看月亮吧。即使它看起来很小很遥远，它依然在那里，静静地发光，就像你心里的力量一样。</p>
+                <p>抱着温暖与希望，<br>一个朋友</p>
+        </div>
+
+        <!-- English Letter -->
+        <div class="section">
+            <h2>To Luna,</h2>
+            <div class="letter">
+                <p>Dear Luna,</p>
+ <p>I know life feels heavy right now. Finals are tough, your body is tired, and being away from home during the holidays makes everything a little harder. It’s okay to feel this way—it just means you’re human, and you care deeply about the things that matter.</p>
+                <p>But Luna, I want you to pause for a moment. Close your eyes, take a deep breath, and remind yourself: You’ve come so far. You’ve faced challenges that once felt impossible, and yet, here you are, stronger than you were yesterday. That strength is something no one can take away from you.</p>
+                <p>This holiday season might be quieter than usual, but it’s also an opportunity—a chance to reconnect with yourself. Wrap yourself in a blanket, make a warm drink, and let the world slow down for just a moment. You don’t have to do anything extraordinary to deserve rest, love, or kindness. You deserve them just because you are you.</p>
+                <p>Remember, this is just one chapter of your story. The finals will pass, the loneliness will fade, and brighter days are waiting for you. Until then, be gentle with yourself, Luna. You’re doing better than you think.</p>
+                <p>And when you feel the weight of it all, just look up at the moon. Even when it feels small and distant, it’s still there, shining quietly, just like your strength.</p>
+                <p>With warmth and love,<br>A friend</p>
+            </div>
+        </div>
+        <!-- NCT Section -->
+        <div class="section nct-section">
+            <h2>NCT 专属角落</h2>
+            <p>这里是来自 NCT五皇叔 的歌，希望能让你感到开心：</p>
+            <p><a href="https://youtu.be/gvXsmI3Gdq8?si=Lh4Ia2Jf0cnZAmnA" target="_blank">🎵 NCT U - Baggy Jeans (MV)</a></p>
+            <p><a href="https://youtu.be/sGhuwRYp5hM?si=cjsQb8srRXQqMSSE" target="_blank">🎵 NCT U - Baggy Jeans (Performance Video)</a></p>
+            <p><a href="https://youtu.be/Ggbo54ljN6s?si=Tkmby0CCiJEeqT_4" target="_blank">🎵 NCT U - Baggy Jeans (Dance Practice)</a></p>
+            <p><a href="https://youtu.be/jxLrb_XHCTo?si=zOPE10ptPQMuDuHY" target="_blank">🎵 NCT U - Baggy Jeans (Dance Practice Behind)</a></p>
+            <p><a href="https://youtu.be/QVWLY7T2TYk?si=5l0V807jGmXqwRHW" target="_blank">🎵 NCT U - Baggy Jeans (Recording Behind)</a></p>
+            <p><a href="https://youtu.be/3UGMDJ9kZCA?si=tRDneL0NKabvaF9P" target="_blank">🎵 NCT U - The 7th Sense (MV)</a></p>
+            <p><a href="https://youtu.be/yTmR-ogUXqo?si=o99soL1seGU_xhTT" target="_blank">🎵 NCT U - The 7th Sense (Performance Video)</a></p>
+
+            <p>还有一张特别的图片送给你：</p>
+            <img src="https://i.imgur.com/snoLMY3.jpeg" alt="NCT 专属图片" class="special-image">
+                      TEN MARK JAEHYUN TAEYONG DOYOUNG   
+
+        </div>
+        </div>
+      
+        <!-- 随机鼓励卡片 -->
+        <div class="section">
+            <h2>抽取你的鼓励卡片</h2>
+            <button onclick="showRandomCard()">抽一张卡片</button>
+            <div id="card" class="card">🌟 "你很棒，不要怀疑自己的价值！" 🌟</div>
+    </div>
+
+        <!-- 音乐角 -->
+        <div class="section">
+            <h2>音乐角</h2>
+            <p>点击下面的链接，听一首舒缓的音乐吧：</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=lFcSrYw-ARY" target="_blank">🌿 舒缓的钢琴音乐</a></li>
+                <li><a href="https://www.youtube.com/watch?v=DWcJFNfaw9c" target="_blank">🌊 海浪声与轻音乐</a></li>
+                <li><a href="https://www.youtube.com/watch?v=y6EZvCZhNn0" target="_blank">☁️ 放松的吉他旋律</a></li>
+            </ul>
+        </div>
+
+        <!-- 分享快乐 -->
+ <div class="section">
+    <h2>留言板</h2>
+    <textarea id="messageInput" rows="4" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="写下您的留言..."></textarea>
+    <button onclick="saveMessage()">添加留言</button>
+    <div id="messageContainer" style="margin-top: 20px;"></div>
+</div>
+
+    </div>
+
+    <script>
+// 初始化留言列表
+let messages = JSON.parse(localStorage.getItem('messages')) || [];
+
+// 渲染留言列表
+function renderMessages() {
+    const messageContainer = document.getElementById('messageContainer');
+    messageContainer.innerHTML = ''; // 清空现有内容
+    messages.forEach((message, index) => {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message-item');
+        messageElement.innerHTML = `
+            <p>${message.content}</p>
+            <button onclick="editMessage(${index})">编辑</button>
+            <button onclick="deleteMessage(${index})">删除</button>
+        `;
+        messageContainer.appendChild(messageElement);
+    });
+}
+
+// 保存留言
+function saveMessage() {
+    const inputField = document.getElementById('messageInput');
+    const messageContent = inputField.value.trim();
+    if (messageContent === '') {
+        alert('留言不能为空！');
+        return;
+    }
+
+    // 保存新留言到数组并更新本地存储
+    messages.push({ content: messageContent });
+    localStorage.setItem('messages', JSON.stringify(messages));
+    inputField.value = ''; // 清空输入框
+    renderMessages(); // 重新渲染留言
+}
+
+// 删除留言
+function deleteMessage(index) {
+    if (confirm('确定要删除这条留言吗？')) {
+        messages.splice(index, 1); // 从数组中移除
+        localStorage.setItem('messages', JSON.stringify(messages));
+        renderMessages(); // 重新渲染留言
+    }
+}
+
+// 编辑留言
+function editMessage(index) {
+    const newContent = prompt('编辑留言内容：', messages[index].content);
+    if (newContent && newContent.trim() !== '') {
+        messages[index].content = newContent.trim();
+        localStorage.setItem('messages', JSON.stringify(messages));
+        renderMessages(); // 重新渲染留言
+    }
+}
+
+
+
+        function createElements(type, count, styleCallback) {
+            const background = document.querySelector('.background');
+            for (let i = 0; i < count; i++) {
+                const element = document.createElement('div');
+                element.classList.add(type);
+                styleCallback(element);
+                background.appendChild(element);
+            }
+        }
+
+        function showRandomCard() {
+            const cards = [
+                "你很棒，不要怀疑自己的价值！",
+                "今天的你已经很努力了，放松一下吧！",
+                "生活会慢慢好起来的，你要相信。",
+                "即使再小的步伐，也是在向前。",
+                "做自己就好，你是独一无二的！"
+            ];
+            const randomCard = cards[Math.floor(Math.random() * cards.length)];
+            const cardElement = document.getElementById('card');
+            cardElement.textContent = `🌟 "${randomCard}" 🌟`;
+            cardElement.style.display = 'block';
+        }
+
+  
+
+
+// 页面加载时自动填充家人和朋友留言
+window.onload = function () {
+    createElements('star', 50, (star) => {
+        star.style.left = `${Math.random() * 100}vw`;
+        star.style.top = `${Math.random() * 100}vh`;
+        star.style.animationDuration = `${Math.random() * 2 + 1}s`;
+    });
+
+    createElements('snowflake', 30, (snowflake) => {
+        snowflake.textContent = '❄';
+        snowflake.style.left = `${Math.random() * 100}vw`;
+        snowflake.style.fontSize = `${Math.random() * 20 + 10}px`;
+        snowflake.style.animationDuration = `${Math.random() * 8 + 4}s`;
+        snowflake.style.animationDelay = `${Math.random() * 5}s`;
+    });
+  
+    renderMessages();
+  
+};
+
+
+    </script>
+</body>
+</html>
